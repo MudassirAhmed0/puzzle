@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/output.css" />
+    <title>upload-img</title>
+  </head>
+  <body>
+    <header
+      style="box-shadow: 0px 4px 50px 0px rgba(29, 43, 96, 0.15)"
+      class="hidden lg:block w-full absolute top-0 left-0 bg-[#FFFFFF] lg:py-[1.77083333333vw] lg:px-[2.5vw]"
+    >
+      <div class="flex justify-between ml-auto lg:w-[90.4861111111vw]">
+        <div class="flex items-center lg:gap-x-[1.11111111111vw] grow-[1]">
+          <img
+            src="./assets/images/icons/close.svg"
+            alt="close"
+            class="lg:size-[1.66666666667vw]"
+          />
+          <span class="font-[800] text24 ls04 sfpro text-black"
+            >Send a box</span
+          >
+        </div>
+        <ul class="header_Steps">
+          <li class="active">
+            <span class="number">1</span>
+            <span class="title">Box details </span>
+          </li>
+          <li>
+            <span class="number">2</span>
+            <span class="title">Unlock method </span>
+          </li>
+          <li>
+            <span class="number">3</span>
+            <span class="title">Recipients </span>
+          </li>
+          <li>
+            <span class="number">4</span>
+            <span class="title">Checkout </span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="fullVh fullSvh flex">
+      <div
+        style="box-shadow: 0px 4px 50px 0px rgba(29, 43, 96, 0.05)"
+        class="sidebar active absolute hidden lg:block lg:relative z-[2] overflow-hidden transition-all duration-300 bg-white lg:px-[1.25vw] lg:py-[1.73611111111vw] lg:w-[15.2777777778vw]"
+      >
+        <div class="size-full">
+          <div class="flex flex-col lg:gap-y-[1.73611111111vw] h-full">
+            <a href="/" class="flex justify-center lg:gap-x-[0.48611111111vw]">
+              <img
+                src="./assets/images/icons/logo.svg"
+                alt="logo"
+                class="lg:w-[2.08333333333vw]"
+              />
+              <img
+                src="./assets/images/icons/logo-slogan.svg"
+                alt="slogan"
+                class="hideEl lg:w-[4.23611111111vw] mr-auto"
+              />
+            </a>
+            <div
+              style="box-shadow: 0px 2px 5px 0px rgba(29, 43, 96, 0.1)"
+              class="border15 lg:h-[3.33333333333vw] lg:min-h-[3.33333333333vw] w-full flex lg:gap-x-[0.69444444444vw] items-center justify-center"
+            >
+              <img
+                src="./assets/images/icons/search.svg"
+                alt="search"
+                class="lg:w-[1.11111111111vw]"
+              />
+              <input
+                type="text"
+                placeholder="Search puzzle"
+                class="hideEl text15 placeholder:text15 placeholder:text-[#00000080] font-medium text-black w-[7.08333333333vw] bg-transparent outline-none"
+              />
+            </div>
+            <div
+              class="font-medium flex flex-col lg:gap-y-[1.04166666667vw] lg:pb-[1.73611111111vw] h-full"
+            >
+              <span class="text14 sfpro ls0056 sidebar_MainText">Main</span>
+              <ul
+                class="text15 text-black flex-col lg:gap-y-[0.34722222222vw] navigation"
+              >
+                <li>
+                  <a href="" class="item active">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M15 15.8C15 14.0327 12 11 12 11C12 11 9 14.0327 9 15.8C9 17.5673 10.3431 19 12 19C13.6569 19 15 17.5673 15 15.8Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M12 4V8"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.5 7.5L6.5 10.5"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.5 10.5L20.5 7.5"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2 17H6"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18 17H22"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="hideEl">Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="item"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.26999L13 2.26999C12.696 2.09446 12.3511 2.00204 12 2.00204C11.6489 2.00204 11.304 2.09446 11 2.26999L4 6.26999C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.3048 3.00036 7.64927 3 7.99999V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.27002 6.96001L12 12.01L20.73 6.96001"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 22.08V12"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 16H22"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M19 13L22 16L19 19"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="hideEl">Send</span></a
+                  >
+                </li>
+                <li>
+                  <a href="" class="item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.26999L13 2.26999C12.696 2.09446 12.3511 2.00204 12 2.00204C11.6489 2.00204 11.304 2.09446 11 2.26999L4 6.26999C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.3048 3.00036 7.64927 3 7.99999V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.27002 6.96001L12 12.01L20.73 6.96001"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 22.08V12"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M22 16L16 16"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M19 19L16 16L19 13"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="hideEl">Received</span></a
+                  >
+                </li>
+                <li>
+                  <a href="" class="item"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.5 9.4L7.5 4.21"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69752 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69752 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.27002 6.96L12 12.01L20.73 6.96"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 22.08V12"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="hideEl">Track orders</span></a
+                  >
+                </li>
+                <li>
+                  <a href="" class="item"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="hideEl">Account</span></a
+                  >
+                </li>
+              </ul>
+              <div class="grow-[1] flex items-end">
+                <button
+                  style="box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.1)"
+                  class="flex justify-center items-center lg:gap-x-[0.83333333333vw] bg-orange border12 lg:h-[3.33333333333vw] w-full"
+                >
+                  <span class="sfpro text16 text-white font-medium hideEl"
+                    >New Puzzle</span
+                  >
+                  <img
+                    src="./assets/images/icons/sidebar/plus.svg"
+                    alt="plus"
+                    class="lg:w-[1.66666666667vw]"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center lg:gap-x-[0.69444444444vw] mt-auto profile"
+            >
+              <img
+                src="./assets/images/icons/sidebar/avatar.jpg"
+                alt="avatar"
+                class="lg:w-[2.08333333333vw]"
+              />
+              <div class="sfpro text13 flex flex-col hideEl">
+                <span class="text-black font-bold">Frank Jr.</span>
+                <span>frank.jr@gmail.com</span>
+              </div>
+              <img
+                src="./assets/images/icons/sidebar/logout.svg"
+                alt="logout"
+                class="lg:w-[1.11111111111vw] mr-auto hideEl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex sm:flex-row flex-col lg:gap-x-[3.05555555556vw] gap-[30px] w-full lg:w-[unset]"
+      >
+        <div
+          style="box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.15)"
+          class="bg-white lg:px-[2.43055555556vw] lg:pb-[3.5035035035vh] p-[30px] !pt-[unset] lg:w-[32.2916666667vw] sm:w-[35%] flex"
+        >
+          <div
+            class="lg:mt-[7.98611111111vw] sm:mt-[120px] mt-[80px] w-full flex flex-col"
+          >
+            <div class="flex flex-col lg:gap-y-[2.5025025025vh] gap-y-[25px]">
+              <div
+                class="flex lg:gap-x-[0.69444444444vw] gap-x-[10px] items-center"
+              >
+                <img
+                  src="./assets/images/popup/puzzle.svg"
+                  alt="puzzle"
+                  class="lg:w-[2.5vw] sm:w-[36px] w-[26px]"
+                />
+                <span class="text15 font-medium text-black"
+                  >Puzzle unlock
+                  <span class="text-[#00000080]">• Change</span></span
+                >
+              </div>
+              <div>
+                <span class="text18 font-extrabold text-black">Add Image</span>
+                <div
+                  class="cursor-pointer lg:mt-[1.04166666667vw] mt-[15px] flex items-center justify-center rounded-[8px] w-full relative"
+                >
+                  <input
+                    style="-webkit-appearance: none"
+                    type="file"
+                    class="absolute inset-0 size-full opacity-0 cursor-pointer z-[2]"
+                  />
+                  <img
+                    src="./assets/images/upload/upload-Input.png"
+                    alt="upload-Input"
+                    class="w-full lg:h-[16.6666666667vw] h-[240px] object-cover"
+                  />
+                  <div
+                    class="absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] flex flex-col items-center lg:gap-y-[0.69444444444vw] gap-y-[10px]"
+                  >
+                    <div
+                      style="box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.15)"
+                      class="lg:size-[3.88888888889vw] size-[50px] bg-white rounded-full flex justify-center items-center"
+                    >
+                      <img
+                        src="./assets/images/icons/upload.svg"
+                        alt="upload"
+                        class="lg:w-[1.66666666667vw] w-[20px]"
+                      />
+                    </div>
+                    <span class="text12 text-black text-center font-[400]"
+                      >Upload Image <br />
+                      (or drag here)</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <span class="text12 font-bold"> Number of puzzle pieces </span>
+                <label
+                  for="number"
+                  class="upload_Input lg:pl-[1.11111111111vw] lg:pr-[0.27777777777vw] pr-[4px] pl-[16px] flex items-center justify-between lg:gap-x-[1.11111111111vw] sm:gap-[12px] gap-x-[16px] border8 border-[#00000080] focus:border-black border lg:mt-[0.55555555555vw] mt-[8px] w-full lg:h-[3.61111111111vw] sm:h-[52px] h-[42px]"
+                >
+                  <input
+                    id="number"
+                    type="number"
+                    value="24"
+                    class="mr-auto w-[80%] lg:w-[unset] lg:grow-[1] sm:grow-0 grow-[1] text15 font-[400] text-black bg-transparent outline-none"
+                  />
+                  <div
+                    class="flex flex-col lg:gap-y-[0.20833333333vw] gap-y-[3px]"
+                  >
+                    <img
+                      src="./assets/images/upload/increase.svg"
+                      alt="increase"
+                      class="lg:w-[2.77777777778vw] w-[20px]"
+                    />
+                    <img
+                      src="./assets/images/upload/increase.svg"
+                      alt="increase"
+                      class="lg:w-[2.77777777778vw] w-[20px] scale-y-[-1]"
+                    />
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:w-[57.6388888889vw] sm:w-[58%] sm:h-[unset] h-[70vh] flex"
+        >
+          <div
+            style="box-shadow: 0px 58px 67px 0px rgba(0, 0, 0, 0.09)"
+            class="lg:mt-[7.29166666667vw] sm:mt-[120px] w-full flex justify-center items-center relative"
+          >
+            <div class="absolute inset-0 size-full">
+              <span
+                style="
+                  background: rgba(255, 255, 255, 0.51);
+                  backdrop-filter: blur(23.5px);
+                "
+                class="absolute inset-0 size-full"
+              ></span>
+              <span
+                style="background: rgba(255, 255, 255, 0.2)"
+                class="absolute inset-0 size-full"
+              ></span>
+            </div>
+            <img
+              src="./assets/images/page1/gift.png"
+              alt="gift"
+              class="lg:w-[35.035035035vh] sm:w-[60%] w-[40%] relative z-[2]"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
