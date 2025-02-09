@@ -175,6 +175,9 @@ html {
   .header_Steps li.active .title {
     @apply text-black;
   }
+  .sendersTab.active {
+    @apply bg-black text-white;
+  }
   .popup_ModalCard {
     @apply transition-all duration-500 relative lg:w-[13.1944444444vw] lg:h-[12.9166666667vw] sm:w-[190px] sm:h-[186px] w-[46%] h-[120px] border15 flex flex-col items-center justify-center;
   }

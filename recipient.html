@@ -348,143 +348,105 @@
           <div
             class="lg:mt-[7.98611111111vw] sm:mt-[120px] mt-[80px] w-full flex flex-col"
           >
-            <div class="flex flex-col lg:gap-y-[2.5025025025vh] gap-y-[25px]">
-              <div
-                class="flex lg:gap-x-[0.69444444444vw] gap-x-[10px] items-center"
-              >
-                <img
-                  src="./assets/images/popup/puzzle.svg"
-                  alt="puzzle"
-                  class="lg:w-[2.5vw] sm:w-[36px] w-[26px]"
-                />
-                <span class="text15 font-medium text-black"
-                  >Puzzle unlock
-                  <span class="text-[#00000080]">• Change</span></span
+            <div
+              class="flex flex-col lg:gap-y-[2.5025025025vh] gap-y-[25px] h-full"
+            >
+              <div class="w-full bg-[#F3F4F6] rounded-[100px] flex">
+                <button
+                  class="w-[50%] sendersTab active text-black py-[0.69444444444vw] px-[1vw] rounded-[100px] lg:text16 font-[800] sfpro"
                 >
+                  Recipient
+                </button>
+                <button
+                  class="w-[50%] sendersTab text-black py-[0.69444444444vw] px-[1vw] rounded-[100px] lg:text16 font-[800] sfpro"
+                >
+                  Sender
+                </button>
               </div>
-              <div>
-                <span class="text18 font-extrabold text-black">Add Image</span>
-                <div
-                  class="cursor-pointer lg:mt-[1.04166666667vw] mt-[15px] flex items-center justify-center rounded-[8px] w-full relative"
-                >
-                  <input
-                    style="-webkit-appearance: none"
-                    type="file"
-                    class="absolute inset-0 size-full opacity-0 cursor-pointer z-[2]"
-                  />
-                  <img
-                    src="./assets/images/upload/upload-input.svg"
-                    alt="upload-Input"
-                    class="w-full lg:h-[16.6666666667vw] h-[240px] object-cover"
-                  />
-                  <div
-                    class="absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] flex flex-col items-center lg:gap-y-[0.69444444444vw] gap-y-[10px]"
+              <div
+                class="flex flex-col lg:gap-y-[1.1vw] lg:mt-[1.73611111111vw]"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="text-[#00000080] font-[700] lg:text12 mb-[0.55vw]"
                   >
-                    <div
-                      style="box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.15)"
-                      class="lg:size-[3.88888888889vw] size-[50px] bg-white rounded-full flex justify-center items-center"
-                    >
-                      <img
-                        src="./assets/images/icons/upload.svg"
-                        alt="upload"
-                        class="lg:w-[1.66666666667vw] w-[20px]"
-                      />
-                    </div>
-                    <span class="text12 text-black text-center font-[400]"
-                      >Upload Image <br />
-                      (or drag here)</span
-                    >
+                    Recipient address
+                  </span>
+                  <div class="relative">
+                    <input
+                      id="recipent_address"
+                      name="recipent_address"
+                      placeholder="Email address"
+                      value="alex@puzzle.ai"
+                      class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:pl-[3.88888888889vw] lg:pr-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
+                    />
+                    <img
+                      src="./assets/images/icons/home.svg"
+                      alt="Home"
+                      class="absolute top-[50%] transform translate-y-[-50%] left-[1.1111111111vw] w-[1.31944444444vw]"
+                    />
                   </div>
                 </div>
-              </div>
-              <div
-                class="flex flex-col lg:gap-y-[1.04166666667vw] gap-y-[15px]"
-              >
-                <span class="text12 font-bold"> Current Image </span>
-                <div
-                  class="border8 overflow-hidden bg-[#F2F3F4] flex items-center lg:gap-x-[1.38888888889vw] sm:gap-x-[15px] gap-x-[20px]"
-                >
-                  <img
-                    src="./assets/images/upload/pf.jpg"
-                    alt="pf"
-                    class="lg:w-[5.20833333333vw]"
+                <div>
+                  <input
+                    id="city"
+                    name="city"
+                    placeholder="City, State"
+                    class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:px-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
                   />
-                  <div
-                    class="flex flex-col lg:gap-y-[0.69444444444vw] gap-y-[10px]"
-                  >
-                    <span class="text15">filename.png</span>
-                    <span
-                      class="text13 text-orange bg-white border20 lg:py-[0.55555555555vw] lg:px-[1.11111111111vw]"
-                      >Replace</span
-                    >
-                  </div>
+                </div>
+                <div>
+                  <input
+                    id="zip_code"
+                    name="zip_code"
+                    placeholder="Zip Code"
+                    class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:px-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
+                  />
                 </div>
                 <div class="flex flex-col">
-                  <span class="text12 font-bold">
-                    Number of puzzle pieces
+                  <span
+                    class="text-[#00000080] font-[700] lg:text12 mb-[0.55vw]"
+                  >
+                    Country
                   </span>
-                  <label
-                    for="number"
-                    class="upload_Input flex items-center justify-between lg:gap-x-[1.11111111111vw] sm:gap-[12px] gap-x-[16px] border8 border-[#00000080] focus:border-black border lg:mt-[0.55555555555vw] mt-[8px] w-full"
-                  >
+                  <div class="relative">
                     <input
-                      id="number"
-                      type="number"
-                      value="24"
-                      class="lg:pl-[1.11111111111vw] lg:pr-[1.11111111111vw] pr-[4px] pl-[16px] lg:h-[3.61111111111vw] sm:h-[52px] h-[42px] w-full text15 font-[400] text-black bg-transparent outline-none"
+                      id="country"
+                      name="country"
+                      placeholder="Country"
+                      value="United States"
+                      class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:pl-[3.88888888889vw] lg:pr-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
                     />
-                    <!-- <div
-                      class="flex flex-col lg:gap-y-[0.20833333333vw] gap-y-[3px]"
-                    >
-                      <img
-                        src="./assets/images/upload/increase.svg"
-                        alt="increase"
-                        class="lg:w-[2.77777777778vw] w-[20px]"
-                      />
-                      <img
-                        src="./assets/images/upload/increase.svg"
-                        alt="increase"
-                        class="lg:w-[2.77777777778vw] w-[20px] scale-y-[-1]"
-                      />
-                    </div> -->
-                  </label>
+                    <img
+                      src="./assets/images/icons/globe.svg"
+                      alt="Home"
+                      class="absolute top-[50%] transform translate-y-[-50%] left-[1.1111111111vw] w-[1.31944444444vw]"
+                    />
+                  </div>
                 </div>
-                <div
-                  class="grow-[1] gap-x-[0.7vw] flex justify-start items-end lg:mt-[2vw]"
+              </div>
+              <div
+                class="grow-[1] gap-x-[0.7vw] flex justify-start items-end pt-[2vw] lg:mt-[auto]"
+              >
+                <a
+                  href="./sender.html"
+                  class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-orange border12 lg:px-[1.11111111111vw] lg:py-[0.83333333333vw] px-[14px] py-[10px]"
                 >
-                  <a
-                    href="./popup.html"
-                    class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-black border12 lg:px-[1.11111111111vw] lg:py-[0.83333333333vw] px-[14px] py-[10px]"
+                  <span class="sfpro text16 text-white font-medium"
+                    >Continue to Sender</span
                   >
-                    <span class="sfpro text16 text-white font-medium"
-                      >Update puzzle</span
-                    >
-                    <img
-                      src="./assets/images/icons/update.svg"
-                      alt="chevron"
-                      class="lg:w-[1.66666666667vw]"
-                    />
-                  </a>
-                  <a
-                    href="./popup.html"
-                    class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-orange border12 lg:px-[1.11111111111vw] lg:py-[0.83333333333vw] px-[14px] py-[10px]"
-                  >
-                    <span class="sfpro text16 text-white font-medium"
-                      >Continue</span
-                    >
-                    <img
-                      src="./assets/images/icons/chevron-right-white.svg"
-                      alt="chevron"
-                      class="lg:w-[1.66666666667vw]"
-                    />
-                  </a>
-                </div>
+                  <img
+                    src="./assets/images/icons/chevron-right-white.svg"
+                    alt="chevron"
+                    class="lg:w-[1.66666666667vw]"
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="lg:w-[56.6666666667vw] flex justify-center items-center sm:w-[58%] sm:h-[unset] h-[70vh] flex bg-[#fff] mb-[1.4vw] mt-[7.98611111111vw]"
+          class="lg:w-[56.6666666667vw] flex justify-center items-center sm:w-[58%] sm:h-[unset] h-[70vh] flex bg-[#ffffff82] backdrop-blur-[23.5px] mb-[1.4vw] mt-[7.98611111111vw]"
         >
           <img
             src="./assets/images/recipent/girl-feeling-happy-after-receiving-love-gift.png"
