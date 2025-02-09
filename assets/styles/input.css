@@ -197,11 +197,11 @@ html {
 /* Chrome, Safari, Edge, Opera */
 .upload_Input input::-webkit-outer-spin-button,
 .upload_Input input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  /* -webkit-appearance: none;
+  margin: 0; */
 }
 
 /* Firefox */
 .upload_Input input[type="number"] {
-  -moz-appearance: textfield;
+  /* -moz-appearance: textfield; */
 }

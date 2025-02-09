@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/output.css" />
-    <title>upload-img</title>
+    <title>upload-img2</title>
   </head>
   <body>
     <header
@@ -27,7 +27,7 @@
             <span class="number">1</span>
             <span class="title">Box details </span>
           </li>
-          <li>
+          <li class="active">
             <span class="number">2</span>
             <span class="title">Unlock method </span>
           </li>
@@ -339,7 +339,7 @@
         </div>
       </div>
       <div
-        class="flex sm:flex-row flex-col lg:gap-x-[3.05555555556vw] gap-[30px] w-full lg:w-[unset]"
+        class="flex sm:flex-row flex-col lg:gap-x-[3.54166666667vw] gap-[30px] w-full lg:w-[unset]"
       >
         <div
           style="box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.15)"
@@ -373,7 +373,7 @@
                     class="absolute inset-0 size-full opacity-0 cursor-pointer z-[2]"
                   />
                   <img
-                    src="./assets/images/upload/upload-Input.png"
+                    src="./assets/images/upload/upload-input.svg"
                     alt="upload-Input"
                     class="w-full lg:h-[16.6666666667vw] h-[240px] object-cover"
                   />
@@ -397,45 +397,100 @@
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col">
-                <span class="text12 font-bold"> Number of puzzle pieces </span>
-                <label
-                  for="number"
-                  class="upload_Input lg:pl-[1.11111111111vw] lg:pr-[0.27777777777vw] pr-[4px] pl-[16px] flex items-center justify-between lg:gap-x-[1.11111111111vw] sm:gap-[12px] gap-x-[16px] border8 border-[#00000080] focus:border-black border lg:mt-[0.55555555555vw] mt-[8px] w-full lg:h-[3.61111111111vw] sm:h-[52px] h-[42px]"
+              <div
+                class="flex flex-col lg:gap-y-[1.04166666667vw] gap-y-[15px]"
+              >
+                <span class="text12 font-bold"> Current Image </span>
+                <div
+                  class="border8 overflow-hidden bg-[#F2F3F4] flex items-center lg:gap-x-[1.38888888889vw] sm:gap-x-[15px] gap-x-[20px]"
                 >
-                  <input
-                    id="number"
-                    type="number"
-                    value="24"
-                    class="mr-auto w-[80%] lg:w-[unset] lg:grow-[1] sm:grow-0 grow-[1] text15 font-[400] text-black bg-transparent outline-none"
+                  <img
+                    src="./assets/images/upload/pf.jpg"
+                    alt="pf"
+                    class="lg:w-[5.20833333333vw]"
                   />
                   <div
-                    class="flex flex-col lg:gap-y-[0.20833333333vw] gap-y-[3px]"
+                    class="flex flex-col lg:gap-y-[0.69444444444vw] gap-y-[10px]"
                   >
-                    <img
-                      src="./assets/images/upload/increase.svg"
-                      alt="increase"
-                      class="lg:w-[2.77777777778vw] w-[20px]"
-                    />
-                    <img
-                      src="./assets/images/upload/increase.svg"
-                      alt="increase"
-                      class="lg:w-[2.77777777778vw] w-[20px] scale-y-[-1]"
-                    />
+                    <span class="text15">filename.png</span>
+                    <span
+                      class="text13 text-orange bg-white border20 lg:py-[0.55555555555vw] lg:px-[1.11111111111vw]"
+                      >Replace</span
+                    >
                   </div>
-                </label>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text12 font-bold">
+                    Number of puzzle pieces
+                  </span>
+                  <label
+                    for="number"
+                    class="upload_Input flex items-center justify-between lg:gap-x-[1.11111111111vw] sm:gap-[12px] gap-x-[16px] border8 border-[#00000080] focus:border-black border lg:mt-[0.55555555555vw] mt-[8px] w-full"
+                  >
+                    <input
+                      id="number"
+                      type="number"
+                      value="24"
+                      class="lg:pl-[1.11111111111vw] lg:pr-[1.11111111111vw] pr-[4px] pl-[16px] lg:h-[3.61111111111vw] sm:h-[52px] h-[42px] w-full text15 font-[400] text-black bg-transparent outline-none"
+                    />
+                    <!-- <div
+                      class="flex flex-col lg:gap-y-[0.20833333333vw] gap-y-[3px]"
+                    >
+                      <img
+                        src="./assets/images/upload/increase.svg"
+                        alt="increase"
+                        class="lg:w-[2.77777777778vw] w-[20px]"
+                      />
+                      <img
+                        src="./assets/images/upload/increase.svg"
+                        alt="increase"
+                        class="lg:w-[2.77777777778vw] w-[20px] scale-y-[-1]"
+                      />
+                    </div> -->
+                  </label>
+                </div>
+                <div
+                  class="grow-[1] gap-x-[0.7vw] flex justify-start items-end lg:mt-[2vw]"
+                >
+                  <a
+                    href="#"
+                    class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-black border12 lg:px-[1.11111111111vw] lg:py-[0.83333333333vw] px-[14px] py-[10px]"
+                  >
+                    <span class="sfpro text16 text-white font-medium"
+                      >Update puzzle</span
+                    >
+                    <img
+                      src="./assets/images/icons/update.svg"
+                      alt="chevron"
+                      class="lg:w-[1.66666666667vw]"
+                    />
+                  </a>
+                  <a
+                    href="./recipient.html"
+                    class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-orange border12 lg:px-[1.11111111111vw] lg:py-[0.83333333333vw] px-[14px] py-[10px]"
+                  >
+                    <span class="sfpro text16 text-white font-medium"
+                      >Continue</span
+                    >
+                    <img
+                      src="./assets/images/icons/chevron-right-white.svg"
+                      alt="chevron"
+                      class="lg:w-[1.66666666667vw]"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="lg:w-[57.6388888889vw] sm:w-[58%] sm:h-[unset] h-[70vh] flex"
+          class="lg:w-[56.6666666667vw] sm:w-[58%] sm:h-[unset] h-[70vh] flex"
         >
           <div
             style="box-shadow: 0px 58px 67px 0px rgba(0, 0, 0, 0.09)"
-            class="lg:mt-[7.29166666667vw] sm:mt-[120px] w-full flex justify-center items-center relative"
+            class="lg:mt-[7.29166666667vw] lg:mb-[2vw] mb-[30px] sm:mt-[120px] w-full flex justify-center items-center relative"
           >
-            <div class="absolute inset-0 size-full">
+            <!-- <div class="absolute inset-0 size-full">
               <span
                 style="
                   background: rgba(255, 255, 255, 0.51);
@@ -447,11 +502,11 @@
                 style="background: rgba(255, 255, 255, 0.2)"
                 class="absolute inset-0 size-full"
               ></span>
-            </div>
+            </div> -->
             <img
-              src="./assets/images/page1/gift.png"
-              alt="gift"
-              class="lg:w-[35.035035035vh] sm:w-[60%] w-[40%] relative z-[2]"
+              src="./assets/images/upload/pieces.png"
+              alt="pieces"
+              class="size-full"
             />
           </div>
         </div>
