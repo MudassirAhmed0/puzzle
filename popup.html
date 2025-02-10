@@ -78,10 +78,38 @@
     </div>
     <header
       style="box-shadow: 0px 4px 50px 0px rgba(29, 43, 96, 0.15)"
-      class="hidden lg:block w-full absolute top-0 left-0 bg-[#FFFFFF] lg:py-[1.77083333333vw] lg:px-[2.5vw]"
+      class="w-full absolute top-0 left-0 bg-[#FFFFFF] lg:py-[1.77083333333vw] py-[25px] lg:px-[2.5vw]"
     >
-      <div class="flex justify-between ml-auto lg:w-[90.4861111111vw]">
-        <div class="flex items-center lg:gap-x-[1.11111111111vw] grow-[1]">
+      <div
+        class="flex justify-between lg:ml-auto lg:mr-[unset] lg:w-[90.4861111111vw] w-[87%] mx-auto"
+      >
+        <div class="lg:hidden flex gap-x-[20px] items-center">
+          <a
+            href="/"
+            class="flex justify-center lg:gap-x-[0.48611111111vw] gap-[7px]"
+          >
+            <img
+              src="./assets/images/icons/logo.svg"
+              alt="logo"
+              class="lg:w-[2.08333333333vw]"
+            />
+            <img
+              src="./assets/images/icons/logo-slogan.svg"
+              alt="slogan"
+              class="hideEl lg:w-[4.23611111111vw] mr-auto"
+            />
+          </a>
+          <button onclick="toggleSideBar()">
+            <img
+              src="./assets/images/icons/sidebar-icon.svg"
+              alt="sidebar-icon"
+              class="w-[20px]"
+            />
+          </button>
+        </div>
+        <div
+          class="hidden lg:flex items-center lg:gap-x-[1.11111111111vw] grow-[1]"
+        >
           <img
             src="./assets/images/icons/close.svg"
             alt="close"
@@ -112,13 +140,29 @@
       </div>
     </header>
     <main class="fullVh fullSvh flex">
+      <span
+        onclick="toggleSideBar()"
+        class="opacity-0 z-[2] hidden sidebar-overlay absolute top-0 left-0 w-full h-[100vh] bg-[#343631E5]"
+      ></span>
       <div
         style="box-shadow: 0px 4px 50px 0px rgba(29, 43, 96, 0.05)"
-        class="sidebar active absolute hidden lg:block lg:relative z-[2] overflow-hidden transition-all duration-300 bg-white lg:px-[1.25vw] lg:py-[1.73611111111vw] lg:w-[15.2777777778vw]"
+        class="sidebar active absolute left-[-100%] lg:left-0 top-0 px-[18px] py-[25px] h-[100vh] lg:h-[unset] lg:relative z-[2] lg:overflow-hidden overflow-auto transition-all duration-300 bg-white lg:px-[1.25vw] lg:py-[1.73611111111vw] lg:w-[15.2777777778vw]"
       >
         <div class="size-full">
-          <div class="flex flex-col lg:gap-y-[1.73611111111vw] h-full">
-            <a href="/" class="flex justify-center lg:gap-x-[0.48611111111vw]">
+          <div
+            class="flex flex-col lg:gap-y-[1.73611111111vw] gap-y-[25px] h-full"
+          >
+            <div class="flex justify-end lg:hidden" onclick="toggleSideBar()">
+              <img
+                src="./assets/images/icons/close.svg"
+                alt="close"
+                class="lg:size-[1.66666666667vw]"
+              />
+            </div>
+            <a
+              href="/"
+              class="flex justify-center lg:gap-x-[0.48611111111vw] gap-[7px]"
+            >
               <img
                 src="./assets/images/icons/logo.svg"
                 alt="logo"
@@ -132,7 +176,7 @@
             </a>
             <div
               style="box-shadow: 0px 2px 5px 0px rgba(29, 43, 96, 0.1)"
-              class="border15 lg:h-[3.33333333333vw] lg:min-h-[3.33333333333vw] w-full flex lg:gap-x-[0.69444444444vw] items-center justify-center"
+              class="border15 lg:h-[3.33333333333vw] lg:min-h-[3.33333333333vw] h-[48px] min-h-[48px] w-full flex lg:gap-x-[0.69444444444vw] gap-x-[10px] items-center justify-center"
             >
               <img
                 src="./assets/images/icons/search.svg"
@@ -142,15 +186,15 @@
               <input
                 type="text"
                 placeholder="Search puzzle"
-                class="hideEl text15 placeholder:text15 placeholder:text-[#00000080] font-medium text-black w-[7.08333333333vw] bg-transparent outline-none"
+                class="hideEl text15 placeholder:text15 placeholder:text-[#00000080] font-medium text-black lg:w-[7.08333333333vw] w-[46%] bg-transparent outline-none"
               />
             </div>
             <div
-              class="font-medium flex flex-col lg:gap-y-[1.04166666667vw] lg:pb-[1.73611111111vw] h-full"
+              class="font-medium flex flex-col lg:gap-y-[1.04166666667vw] gap-y-[15px] lg:pb-[1.73611111111vw] pb-[25px] h-full"
             >
               <span class="text14 sfpro ls0056 sidebar_MainText">Main</span>
               <ul
-                class="text15 text-black flex-col lg:gap-y-[0.34722222222vw] navigation"
+                class="text15 text-black flex flex-col lg:gap-y-[0.34722222222vw] gap-y-[5px] navigation"
               >
                 <li>
                   <a href="" class="item active">
@@ -373,7 +417,7 @@
               <div class="grow-[1] flex items-end">
                 <button
                   style="box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.1)"
-                  class="flex justify-center items-center lg:gap-x-[0.83333333333vw] bg-orange border12 lg:h-[3.33333333333vw] w-full"
+                  class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-orange border12 lg:h-[3.33333333333vw] h-[48px] w-full"
                 >
                   <span class="sfpro text16 text-white font-medium hideEl"
                     >New Puzzle</span
@@ -387,7 +431,7 @@
               </div>
             </div>
             <div
-              class="flex justify-center items-center lg:gap-x-[0.69444444444vw] mt-auto profile"
+              class="flex justify-center items-center lg:gap-x-[0.69444444444vw] gap-x-[10px] mt-auto profile"
             >
               <img
                 src="./assets/images/icons/sidebar/avatar.jpg"
@@ -415,7 +459,7 @@
           class="bg-white lg:px-[2.43055555556vw] lg:pb-[3.5035035035vh] p-[30px] !pt-[unset] lg:w-[32.2916666667vw] sm:w-[35%] flex"
         >
           <div
-            class="lg:mt-[7.98611111111vw] sm:mt-[120px] mt-[80px] w-full flex flex-col"
+            class="lg:mt-[7.98611111111vw] sm:mt-[120px] mt-[120px] w-full flex flex-col"
           >
             <span class="text18 font-extrabold text-black">Send your box</span>
             <div
@@ -516,5 +560,6 @@
         </div>
       </div>
     </main>
+    <script src="./assets/javascript/global.js"></script>
   </body>
 </html>

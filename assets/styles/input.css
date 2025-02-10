@@ -126,21 +126,22 @@ html {
   .border20 {
     @apply lg:rounded-[1.38888888889vw] rounded-[20px];
   }
+
   .sidebar.active {
     @apply lg:w-[4.51388888889vw] lg:px-[0.69444444444vw];
   }
   .sidebar.active .hideEl {
-    @apply opacity-0 hidden;
+    @apply lg:opacity-0 lg:hidden;
   }
 
   .sidebar.active .sidebar_MainText {
-    @apply text-center;
+    @apply lg:text-center;
   }
   .sidebar .navigation .item {
-    @apply flex lg:gap-x-[1.04166666667vw] justify-center items-center lg:h-[3.05555555556vw] relative after:content-[''] after:size-[0.97222222222vw] after:rounded-full after:bg-transparent after:absolute after:top-[50%] after:translate-y-[-50%] after:left-[-1.73611111111vw];
+    @apply flex lg:gap-x-[1.04166666667vw] gap-x-[5px] justify-center items-center lg:h-[3.05555555556vw] h-[44px] relative after:content-[''] after:lg:size-[0.97222222222vw] after:rounded-full after:bg-transparent after:absolute after:top-[50%] after:translate-y-[-50%] after:lg:left-[-1.73611111111vw] after:size-[8px] after:left-[-22px];
   }
   .sidebar.active .item {
-    @apply after:left-[-1.18055555556vw];
+    @apply after:lg:left-[-1.18055555556vw];
   }
   .sidebar .navigation .item.active {
     @apply after:bg-orange;
@@ -164,7 +165,7 @@ html {
     @apply lg:w-[1.66666666667vw];
   }
   .header_Steps {
-    @apply flex lg:gap-x-[2.43055555556vw] items-center text15 font-medium;
+    @apply hidden lg:flex lg:gap-x-[2.43055555556vw] items-center text15 font-medium;
   }
   .header_Steps li {
     @apply flex items-center lg:gap-x-[1.04166666667vw];
@@ -207,4 +208,25 @@ html {
 /* Firefox */
 .upload_Input input[type="number"] {
   /* -moz-appearance: textfield; */
+}
+@media (max-width: 1024px) {
+  .sidebar.toggleActive {
+    left: 0 !important;
+  }
+  .sidebar-overlay {
+    animation: sidebar-fade 250ms linear forwards;
+    animation-delay: 300ms;
+  }
+  @keyframes sidebar-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  body.active {
+    height: 100svh;
+    overflow: hidden;
+  }
 }

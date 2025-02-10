@@ -9,10 +9,38 @@
   <body>
     <header
       style="box-shadow: 0px 4px 50px 0px rgba(29, 43, 96, 0.15)"
-      class="hidden lg:block w-full absolute top-0 left-0 bg-[#FFFFFF] lg:py-[1.77083333333vw] lg:px-[2.5vw]"
+      class="w-full absolute top-0 left-0 bg-[#FFFFFF] lg:py-[1.77083333333vw] py-[25px] lg:px-[2.5vw]"
     >
-      <div class="flex justify-between ml-auto lg:w-[90.4861111111vw]">
-        <div class="flex items-center lg:gap-x-[1.11111111111vw] grow-[1]">
+      <div
+        class="flex justify-between lg:ml-auto lg:mr-[unset] lg:w-[90.4861111111vw] w-[87%] mx-auto"
+      >
+        <div class="lg:hidden flex gap-x-[20px] items-center">
+          <a
+            href="/"
+            class="flex justify-center lg:gap-x-[0.48611111111vw] gap-[7px]"
+          >
+            <img
+              src="./assets/images/icons/logo.svg"
+              alt="logo"
+              class="lg:w-[2.08333333333vw]"
+            />
+            <img
+              src="./assets/images/icons/logo-slogan.svg"
+              alt="slogan"
+              class="hideEl lg:w-[4.23611111111vw] mr-auto"
+            />
+          </a>
+          <button onclick="toggleSideBar()">
+            <img
+              src="./assets/images/icons/sidebar-icon.svg"
+              alt="sidebar-icon"
+              class="w-[20px]"
+            />
+          </button>
+        </div>
+        <div
+          class="hidden lg:flex items-center lg:gap-x-[1.11111111111vw] grow-[1]"
+        >
           <img
             src="./assets/images/icons/close.svg"
             alt="close"
@@ -43,13 +71,29 @@
       </div>
     </header>
     <main class="fullVh fullSvh flex">
+      <span
+        onclick="toggleSideBar()"
+        class="opacity-0 z-[2] hidden sidebar-overlay absolute top-0 left-0 w-full h-[100vh] bg-[#343631E5]"
+      ></span>
       <div
         style="box-shadow: 0px 4px 50px 0px rgba(29, 43, 96, 0.05)"
-        class="sidebar active absolute hidden lg:block lg:relative z-[2] overflow-hidden transition-all duration-300 bg-white lg:px-[1.25vw] lg:py-[1.73611111111vw] lg:w-[15.2777777778vw]"
+        class="sidebar active absolute left-[-100%] lg:left-0 top-0 px-[18px] py-[25px] h-[100vh] lg:h-[unset] lg:relative z-[2] lg:overflow-hidden overflow-auto transition-all duration-300 bg-white lg:px-[1.25vw] lg:py-[1.73611111111vw] lg:w-[15.2777777778vw]"
       >
         <div class="size-full">
-          <div class="flex flex-col lg:gap-y-[1.73611111111vw] h-full">
-            <a href="/" class="flex justify-center lg:gap-x-[0.48611111111vw]">
+          <div
+            class="flex flex-col lg:gap-y-[1.73611111111vw] gap-y-[25px] h-full"
+          >
+            <div class="flex justify-end lg:hidden" onclick="toggleSideBar()">
+              <img
+                src="./assets/images/icons/close.svg"
+                alt="close"
+                class="lg:size-[1.66666666667vw]"
+              />
+            </div>
+            <a
+              href="/"
+              class="flex justify-center lg:gap-x-[0.48611111111vw] gap-[7px]"
+            >
               <img
                 src="./assets/images/icons/logo.svg"
                 alt="logo"
@@ -63,7 +107,7 @@
             </a>
             <div
               style="box-shadow: 0px 2px 5px 0px rgba(29, 43, 96, 0.1)"
-              class="border15 lg:h-[3.33333333333vw] lg:min-h-[3.33333333333vw] w-full flex lg:gap-x-[0.69444444444vw] items-center justify-center"
+              class="border15 lg:h-[3.33333333333vw] lg:min-h-[3.33333333333vw] h-[48px] min-h-[48px] w-full flex lg:gap-x-[0.69444444444vw] gap-x-[10px] items-center justify-center"
             >
               <img
                 src="./assets/images/icons/search.svg"
@@ -73,15 +117,15 @@
               <input
                 type="text"
                 placeholder="Search puzzle"
-                class="hideEl text15 placeholder:text15 placeholder:text-[#00000080] font-medium text-black w-[7.08333333333vw] bg-transparent outline-none"
+                class="hideEl text15 placeholder:text15 placeholder:text-[#00000080] font-medium text-black lg:w-[7.08333333333vw] w-[46%] bg-transparent outline-none"
               />
             </div>
             <div
-              class="font-medium flex flex-col lg:gap-y-[1.04166666667vw] lg:pb-[1.73611111111vw] h-full"
+              class="font-medium flex flex-col lg:gap-y-[1.04166666667vw] gap-y-[15px] lg:pb-[1.73611111111vw] pb-[25px] h-full"
             >
               <span class="text14 sfpro ls0056 sidebar_MainText">Main</span>
               <ul
-                class="text15 text-black flex-col lg:gap-y-[0.34722222222vw] navigation"
+                class="text15 text-black flex flex-col lg:gap-y-[0.34722222222vw] gap-y-[5px] navigation"
               >
                 <li>
                   <a href="" class="item active">
@@ -304,7 +348,7 @@
               <div class="grow-[1] flex items-end">
                 <button
                   style="box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.1)"
-                  class="flex justify-center items-center lg:gap-x-[0.83333333333vw] bg-orange border12 lg:h-[3.33333333333vw] w-full"
+                  class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-orange border12 lg:h-[3.33333333333vw] h-[48px] w-full"
                 >
                   <span class="sfpro text16 text-white font-medium hideEl"
                     >New Puzzle</span
@@ -318,7 +362,7 @@
               </div>
             </div>
             <div
-              class="flex justify-center items-center lg:gap-x-[0.69444444444vw] mt-auto profile"
+              class="flex justify-center items-center lg:gap-x-[0.69444444444vw] gap-x-[10px] mt-auto profile"
             >
               <img
                 src="./assets/images/icons/sidebar/avatar.jpg"
@@ -346,44 +390,44 @@
           class="bg-white lg:px-[2.43055555556vw] lg:pb-[3.5035035035vh] p-[30px] !pt-[unset] lg:w-[32.2916666667vw] sm:w-[35%] flex"
         >
           <div
-            class="lg:mt-[7.98611111111vw] sm:mt-[120px] mt-[80px] w-full flex flex-col"
+            class="lg:mt-[7.98611111111vw] sm:mt-[120px] mt-[120px] w-full flex flex-col"
           >
             <div
               class="flex flex-col lg:gap-y-[2.5025025025vh] gap-y-[25px] h-full"
             >
               <div class="w-full bg-[#F3F4F6] rounded-[100px] flex">
                 <button
-                  class="w-[50%] sendersTab text-black py-[0.69444444444vw] px-[1vw] rounded-[100px] lg:text16 font-[800] sfpro"
+                  class="w-[50%] sendersTab text-black lg:py-[0.69444444444vw] sm:py-[1.69444444444vw] sm:px-[1vw] py-[10px] px-[14.5px] rounded-[100px] text16 font-[800] sfpro"
                 >
                   Recipient
                 </button>
                 <button
-                  class="w-[50%] sendersTab active text-black py-[0.69444444444vw] px-[1vw] rounded-[100px] lg:text16 font-[800] sfpro"
+                  class="w-[50%] sendersTab active text-black lg:py-[0.69444444444vw] sm:py-[1.69444444444vw] sm:px-[1vw] py-[10px] px-[14.5px] rounded-[100px] text16 font-[800] sfpro"
                 >
                   Sender
                 </button>
               </div>
               <div
-                class="flex flex-col lg:gap-y-[1.1vw] lg:mt-[1.73611111111vw]"
+                class="flex flex-col lg:gap-y-[1.04166666667vw] gap-y-[15px]"
               >
                 <div class="flex flex-col">
                   <span
-                    class="text-[#00000080] font-[700] lg:text12 mb-[0.55vw]"
+                    class="text-[#00000080] font-[700] lg:text12 lg:mb-[0.34722222222vw] mb-[5px]"
                   >
-                    Sender address
+                    Recipient address
                   </span>
                   <div class="relative">
                     <input
-                      id="sender_address"
-                      name="sender_address"
+                      id="recipent_address"
+                      name="recipent_address"
                       placeholder="Email address"
                       value="alex@puzzle.ai"
-                      class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:pl-[3.88888888889vw] lg:pr-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
+                      class="lg:h-[3.61111111111vw] h-[52px] font-[400] w-full flex items-center lg:pl-[3.88888888889vw] lg:pr-[1.1111111111vw] pl-[56px] pr-[16px] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] border8"
                     />
                     <img
                       src="./assets/images/icons/home.svg"
                       alt="Home"
-                      class="absolute top-[50%] transform translate-y-[-50%] left-[1.1111111111vw] w-[1.31944444444vw]"
+                      class="absolute top-[50%] transform translate-y-[-50%] lg:left-[1.1111111111vw] lg:w-[1.31944444444vw] left-[16px] w-[19px]"
                     />
                   </div>
                 </div>
@@ -392,7 +436,7 @@
                     id="city"
                     name="city"
                     placeholder="City, State"
-                    class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:px-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
+                    class="lg:h-[3.61111111111vw] h-[52px] font-[400] w-full flex items-center lg:px-[1.1111111111vw] px-[16px] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] border8"
                   />
                 </div>
                 <div>
@@ -400,12 +444,12 @@
                     id="zip_code"
                     name="zip_code"
                     placeholder="Zip Code"
-                    class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:px-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
+                    class="lg:h-[3.61111111111vw] h-[52px] font-[400] w-full flex items-center lg:px-[1.1111111111vw] px-[16px] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] border8"
                   />
                 </div>
                 <div class="flex flex-col">
                   <span
-                    class="text-[#00000080] font-[700] lg:text12 mb-[0.55vw]"
+                    class="text-[#00000080] font-[700] lg:text12 lg:mb-[0.55555555555vw] mb-[8px]"
                   >
                     Country
                   </span>
@@ -415,12 +459,12 @@
                       name="country"
                       placeholder="Country"
                       value="United States"
-                      class="lg:h-[3.61111111111vw] font-[400] w-full flex items-center lg:pl-[3.88888888889vw] lg:pr-[1.1111111111vw] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] rounded-[0.55555555555vw]"
+                      class="lg:h-[3.61111111111vw] h-[52px] font-[400] w-full flex items-center lg:pl-[3.88888888889vw] lg:pr-[1.1111111111vw] pl-[56px] pr-[16px] border border-[#00000080] lg:text15 text-[#000] outline-none placeholder:text-[#00000080] border8"
                     />
                     <img
                       src="./assets/images/icons/globe.svg"
                       alt="Home"
-                      class="absolute top-[50%] transform translate-y-[-50%] left-[1.1111111111vw] w-[1.31944444444vw]"
+                      class="absolute top-[50%] transform translate-y-[-50%] lg:left-[1.1111111111vw] lg:w-[1.31944444444vw] left-[16px] w-[19px]"
                     />
                   </div>
                 </div>
@@ -429,11 +473,11 @@
                 class="grow-[1] gap-x-[0.7vw] flex justify-start items-end pt-[2vw] lg:mt-[auto]"
               >
                 <a
-                  href="./checkout.html"
+                  href="#"
                   class="flex justify-center items-center lg:gap-x-[0.83333333333vw] gap-x-[12px] bg-orange border12 lg:px-[1.11111111111vw] lg:py-[0.83333333333vw] px-[14px] py-[10px]"
                 >
                   <span class="sfpro text16 text-white font-medium"
-                    >Checkout</span
+                    >Continue to Sender</span
                   >
                   <img
                     src="./assets/images/icons/chevron-right-white.svg"
@@ -446,14 +490,15 @@
           </div>
         </div>
         <div
-          class="lg:w-[56.6666666667vw] flex justify-center items-center sm:w-[58%] sm:h-[unset] h-[70vh] flex bg-[#ffffff82] backdrop-blur-[23.5px] mb-[1.4vw] mt-[7.98611111111vw]"
+          class="lg:w-[56.6666666667vw] flex justify-center items-center sm:w-[58%] sm:h-[unset] h-[70vh] bg-[#ffffff82] backdrop-blur-[23.5px] mb-[1.4vw] mt-[7.98611111111vw]"
         >
           <img
             src="./assets/images/recipent/girl-feeling-happy-after-receiving-love-gift.png"
-            class="lg:w-[24.3055555556vw] object-contain"
+            class="lg:w-[24.3055555556vw] sm:w-[55%] w-[58%] object-contain"
           />
         </div>
       </div>
     </main>
+    <script src="./assets/javascript/global.js"></script>
   </body>
 </html>
